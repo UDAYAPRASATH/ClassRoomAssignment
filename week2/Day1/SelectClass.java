@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class SelectClass {
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args)  {
 
 		ChromeDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -20,9 +20,9 @@ public class SelectClass {
 		driver.findElement(By.partialLinkText("CRM/S")).click();
 		driver.findElement(By.linkText("Leads")).click();
 		driver.findElement(By.linkText("Create Lead")).click();
-		//driver.findElement(By.name("companyName")).click();
+		
 		driver.findElement(By.id("createLeadForm_companyName")).sendKeys("testleaf");
-		Thread.sleep(1000);
+		
 		driver.findElement(By.id("createLeadForm_firstName")).sendKeys("Udayaprasath");
 		driver.findElement(By.id("createLeadForm_lastName")).sendKeys("Karnan");
 		Select select=new Select(driver.findElement(By.id("createLeadForm_dataSourceId")));
